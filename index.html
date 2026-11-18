@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="AREA 51 — Not every Night party is from this world. Book your ticket for December 4, 2026 in Offa, Kwara State.">
+  <title>AREA 51 | Official Ticket Booking</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    /* Public page theme: white, calm colours, very bold heading.
+       These rules override style.css for this page only, so the staff page is unaffected. */
+    :root{--ink:#0f172a;--accent:#12805c;--blue:#2563eb;--soft:#f5f8fb;--line:#dbe3ec;--muted:#556070}
+    body{background:#ffffff;color:var(--ink);min-height:100vh;font-family:Arial,Helvetica,sans-serif}
+
+    .public-header{padding:56px 18px 38px;background:#ffffff;border-bottom:1px solid var(--line);text-align:center}
+    .public-header .brand{
+      font-family:"Arial Black","Helvetica Neue",Arial,sans-serif;
+      font-size:clamp(72px,21vw,150px);
+      font-weight:900;line-height:.92;letter-spacing:-3px;color:var(--ink);text-transform:uppercase
+    }
+    .public-header .brand span{display:inline-block;color:var(--accent);background:linear-gradient(90deg,var(--accent),var(--blue));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+    .public-header p{
+      font-family:"Arial Black","Helvetica Neue",Arial,sans-serif;
+      font-size:clamp(15px,4vw,24px);font-weight:900;line-height:1.3;letter-spacing:.5px;
+      color:var(--ink);margin:18px auto 0;max-width:680px
+    }
+    .hero-copy{max-width:640px;margin:18px auto 0;color:var(--muted);font-size:16px;line-height:1.7}
+    .hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+    .cta{display:inline-block;text-decoration:none;text-align:center;padding:16px 24px;border-radius:10px;font-weight:800;font-size:15px;background:var(--accent);color:#ffffff;border:2px solid var(--accent)}
+    .cta.alt{background:#ffffff;color:var(--blue);border:2px solid var(--blue)}
+
+    .public-main{max-width:980px;margin:28px auto;padding:0 16px}
+    .event-strip{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:22px 0}
+    .event-strip div,.price-card,.booking-card{background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:18px}
+    .event-strip strong{display:block;color:var(--blue);font-size:12px;letter-spacing:1.4px;margin-bottom:8px}
+    .event-strip span{font-size:16px;line-height:1.5;font-weight:700}
+
+    .section-title{
+      font-family:"Arial Black","Helvetica Neue",Arial,sans-serif;
+      text-align:center;color:var(--ink);font-size:clamp(24px,6vw,36px);font-weight:900;margin:40px 0 18px
+    }
+    .section-title::after{content:"";display:block;width:64px;height:5px;border-radius:3px;margin:12px auto 0;background:linear-gradient(90deg,var(--accent),var(--blue))}
+    .prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px}
+    .price-card{text-align:center;background:#ffffff;border:2px solid #cfe0fb;box-shadow:0 4px 14px rgba(37,99,235,.08)}
+    .price-card h3{font-size:14px;letter-spacing:.6px;margin:0 0 10px;color:var(--blue)}
+    .price-card b{font-size:24px;color:var(--accent)}
+
+    .booking-card{display:grid;grid-template-columns:1fr auto;align-items:center;gap:22px;margin-top:26px}
+    .booking-card h2{color:var(--ink);margin-top:0;font-family:"Arial Black","Helvetica Neue",Arial,sans-serif;font-weight:900}
+    .booking-card p{color:var(--muted);line-height:1.65}
+    #bookingQr{background:#fff;padding:12px;border:1px solid var(--line);border-radius:10px;width:max-content;min-width:146px;min-height:146px;display:flex;align-items:center;justify-content:center}
+    #bookingQr img{display:block;max-width:100%}
+    .steps{color:var(--ink);line-height:1.9;padding-left:21px}
+    .steps li::marker{color:var(--accent);font-weight:800}
+    .small-note{text-align:center;color:var(--muted);font-size:12px;line-height:1.6;margin:22px auto;max-width:720px}
+    footer{color:var(--muted);border-top:1px solid var(--line)}
+    .staff-link{color:var(--muted);text-decoration:none;font-size:12px}
+    @media(max-width:600px){.booking-card{grid-template-columns:1fr;text-align:center}.booking-card #bookingQr{margin:auto}.event-strip{grid-template-columns:1fr}.public-header{padding-top:40px}.public-header .brand{letter-spacing:-2px}}
+  </style>
+</head>
+<body>
+  <header class="public-header">
+    <div class="brand">AREA <span>51</span></div>
+    <p>NOT EVERY NIGHT PARTY IS FROM THIS WORLD.</p>
+    <div class="hero-copy">Your night out of this world is calling. Secure your AREA 51 ticket by contacting the organisers on WhatsApp. Payment is verified manually before your entry e-ticket is issued.</div>
+    <div class="hero-actions">
+      <a class="cta" id="whatsappTop" href="https://wa.me/2349065392408" target="_blank" rel="noopener">BOOK YOUR TICKET ON WHATSAPP</a>
+      <a class="cta alt" href="#ticket-prices">VIEW TICKET PRICES</a>
+    </div>
+  </header>
+
+  <main class="public-main">
+    <div class="event-strip">
+      <div><strong>DATE &amp; TIME</strong><span>Friday, 4 December 2026 · 9:00 PM</span></div>
+      <div><strong>VENUE</strong><span>Fresh Homes and Suites Hotel Ltd, Along Abuja Gate, Offa, Kwara State</span></div>
+    </div>
+
+    <h2 class="section-title" id="ticket-prices">CHOOSE YOUR EXPERIENCE</h2>
+    <div class="prices">
+      <div class="price-card"><h3>REGULAR</h3><b>₦5,000</b></div>
+      <div class="price-card"><h3>VIP</h3><b>₦15,000</b></div>
+      <div class="price-card"><h3>TABLE FOR 3</h3><b>₦60,000</b></div>
+      <div class="price-card"><h3>TABLE FOR 5</h3><b>₦100,000</b></div>
+    </div>
+
+    <section class="booking-card">
+      <div>
+        <h2>BOOKING IS SIMPLE</h2>
+        <ol class="steps">
+          <li>Scan the QR code or tap the WhatsApp button.</li>
+          <li>Message the organisers and select your ticket category.</li>
+          <li>Receive payment instructions and complete payment.</li>
+          <li>After payment is verified, receive your unique entry e-ticket.</li>
+          <li>Present the e-ticket QR code at the entrance on event day.</li>
+        </ol>
+        <a class="cta" id="whatsappBottom" href="https://wa.me/2349065392408" target="_blank" rel="noopener">CHAT WITH THE ORGANISERS</a>
+      </div>
+      <div>
+        <div id="bookingQr" aria-label="QR code linking to AREA 51 booking page"></div>
+        <p style="text-align:center;color:var(--muted);font-size:12px;margin-bottom:0">SCAN TO OPEN THIS BOOKING PAGE</p>
+      </div>
+    </section>
+
+    <p class="small-note">Please note: the promotional QR code opens this booking page. It is not an admission ticket. Only an e-ticket issued by the organisers after payment verification can be used for entry. Each issued ticket has its own unique QR code.</p>
+  </main>
+  <footer>AREA 51 · OFFA, KWARA STATE · 4 DECEMBER 2026<br><a class="staff-link" href="staff.html">Authorised staff access</a></footer>
+
+  <script>
+    // Update this one value if the official booking WhatsApp number changes.
+    const BOOKING_WHATSAPP = '2349065392408';
+    const message = 'Hello, I am interested in booking a ticket for AREA 51 2026.';
+    const waLink = `https://wa.me/${BOOKING_WHATSAPP}?text=${encodeURIComponent(message)}`;
+    document.getElementById('whatsappTop').href = waLink;
+    document.getElementById('whatsappBottom').href = waLink;
+    new QRCode(document.getElementById('bookingQr'), {
+      text: window.location.origin + window.location.pathname,
+      width: 146,
+      height: 146,
+      correctLevel: QRCode.CorrectLevel.H
+    });
+  </script>
+</body>
+</html>

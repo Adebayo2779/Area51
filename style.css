@@ -1,0 +1,51 @@
+/* AREA 51 shared theme: white page, green and blue accents, very bold heading */
+:root{--ink:#0f172a;--green:#12805c;--blue:#2563eb;--soft:#f5f8fb;--line:#dbe3ec;--muted:#556070}
+*{box-sizing:border-box}
+body{margin:0;background:#ffffff;color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+
+header{text-align:center;padding:40px 16px 28px;background:#ffffff;border-bottom:1px solid var(--line)}
+.brand{font-family:"Arial Black","Helvetica Neue",Arial,sans-serif;font-size:clamp(60px,18vw,110px);font-weight:900;line-height:.95;letter-spacing:-2px;color:var(--ink);text-transform:uppercase}
+.brand span{display:inline-block;color:var(--green);background:linear-gradient(90deg,var(--green),var(--blue));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+header p{font-family:"Arial Black","Helvetica Neue",Arial,sans-serif;font-weight:900;letter-spacing:.5px;color:var(--ink);font-size:14px;margin:14px 0 0}
+.event{margin-top:12px;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--blue)}
+
+main{max-width:850px;margin:24px auto;padding:0 14px}
+.card{background:#ffffff;border:1px solid var(--line);border-radius:16px;padding:20px;margin:16px 0;box-shadow:0 6px 20px rgba(15,23,42,.06)}
+h1,h2,h3{margin-top:0}
+h1{font-family:"Arial Black","Helvetica Neue",Arial,sans-serif;font-weight:900;font-size:26px;color:var(--ink)}
+h2{color:var(--blue);font-size:20px}
+
+input,select{width:100%;padding:14px;margin:7px 0;border:1.5px solid var(--line);border-radius:10px;background:var(--soft);color:var(--ink);font-size:16px}
+input:focus,select:focus{outline:none;border-color:var(--blue);background:#ffffff}
+button{padding:13px 18px;border:0;border-radius:10px;background:var(--green);color:#ffffff;font-weight:bold;font-size:15px;cursor:pointer;margin:7px 5px 7px 0}
+.secondary{background:#ffffff;color:var(--blue);border:2px solid var(--blue)}
+.hidden{display:none!important}
+.msg{color:var(--blue);min-height:20px;font-weight:700}
+
+/* Door scanner result: big, impossible to misread */
+#scanMsg.ok,#scanMsg.bad,#scanMsg.warn{padding:18px 14px;border-radius:12px;text-align:center;font-size:22px;font-weight:900;letter-spacing:.5px;margin:12px 0}
+#scanMsg.ok{background:#16a34a;color:#ffffff}
+#scanMsg.bad{background:#dc2626;color:#ffffff}
+#scanMsg.warn{background:#f59e0b;color:#111111}
+
+.topline{display:flex;align-items:center;justify-content:space-between}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.stats div{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:15px;text-align:center}
+.stats b{display:block;font-size:28px;color:var(--ink)}
+.stats div:nth-child(2) b{color:var(--green)}
+.stats div:nth-child(3) b{color:var(--blue)}
+.stats small{color:var(--muted);font-weight:700}
+
+.ticket{text-align:center;background:#f2fbf6;color:var(--ink);border:2px dashed var(--green);padding:20px;border-radius:14px;margin-top:18px}
+.ticket h3{color:var(--green);font-family:"Arial Black","Helvetica Neue",Arial,sans-serif}
+.ticket .code{font-family:monospace;font-weight:bold;overflow-wrap:anywhere}
+#qr{display:flex;justify-content:center;margin:15px}
+#reader{max-width:420px;margin:12px auto}
+
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13px}
+td,th{padding:10px;border-bottom:1px solid var(--line);text-align:left}
+th{color:var(--muted);font-size:12px;letter-spacing:.8px;text-transform:uppercase}
+footer{text-align:center;padding:25px;color:var(--muted);font-size:12px}
+
+@media print{body *{visibility:hidden}.ticket,.ticket *{visibility:visible}.ticket{position:absolute;left:0;top:0;width:100%;background:white;color:black}}
